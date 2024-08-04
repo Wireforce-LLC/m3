@@ -1,6 +1,6 @@
-<p style="text-align:center; font-size: 24px; font-weight: bold; margin-bottom: 0px">
+<h1 style="text-align:center; font-size: 24px; font-weight: bold; margin-bottom: 0px">
 M3Flow (in developing)
-</p>  
+</h1>  
 
 <p style="text-align:center; font-size: 12px">
 <b>M3Flow</b> helps teams and individuals manage data and operations quickly and without abstractions
