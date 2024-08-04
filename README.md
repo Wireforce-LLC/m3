@@ -1,11 +1,11 @@
 <center>
-    <h1 align="center" style="text-align:center; font-size: 24px; font-weight: bold; margin-bottom: 0px">
-    M3Flow (in developing)
-    </h1>  
+<h1 align="center" style="text-align:center; font-size: 24px; font-weight: bold; margin-bottom: 0px">
+M3Flow (in developing)
+</h1>  
 
-    <p align="center" style="text-align:center; font-size: 12px">
-    <b>M3Flow</b> helps teams and individuals manage data and operations quickly and without abstractions
-    </p>
+<p align="center" style="text-align:center; font-size: 12px">
+<b>M3Flow</b> helps teams and individuals manage data and operations quickly and without abstractions
+</p>
 </center>
 
 <p align="center" style="margin-bottom: 7px">
