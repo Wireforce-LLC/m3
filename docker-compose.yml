@@ -1,5 +1,6 @@
 services:
   mongodb:
+    container_name: mongodb
     image: mongo
     restart: always
     environment:
@@ -10,8 +11,12 @@ services:
         source: ./.mongod
         target: /data/db
 
-  m3:
-    build: .  
+  m3-server:
+    container_name: m3-server
+    image: m3-server
+    build:
+      context: .
+      dockerfile: next.Dockerfile
     restart: always
     environment:
       - MONGOURI=mongodb://V7AVh7FWmUYTCWzY:dYiQeJyd9Wv9K4Pz@mongodb
@@ -19,3 +24,14 @@ services:
       - mongodb
     ports:
       - 0.0.0.0:3000:3000
+
+  m3-worker:
+    container_name: m3-worker
+    image: m3-worker
+    build:
+      context: .
+      dockerfile: worker.Dockerfile
+    restart: always
+    depends_on:
+      - m3-server
+      - mongodb
