@@ -32,7 +32,7 @@ services:
     build:
       context: .
       dockerfile: worker.Dockerfile
-    entrypoint: 
+    environment: 
       TARGET_HOST: http://m3-server:3000
     restart: always
     depends_on:
