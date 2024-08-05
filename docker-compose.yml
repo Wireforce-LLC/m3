@@ -1,6 +1,7 @@
 services:
   mongodb:
-    image: mongo:8.0.0
+    image: mongo
+    restart: always
     environment:
       - MONGO_INITDB_ROOT_USERNAME=V7AVh7FWmUYTCWzY
       - MONGO_INITDB_ROOT_PASSWORD=dYiQeJyd9Wv9K4Pz
@@ -11,7 +12,10 @@ services:
 
   m3:
     build: .  
+    restart: always
     environment:
       - MONGOURI=mongodb://V7AVh7FWmUYTCWzY:dYiQeJyd9Wv9K4Pz@mongodb
     depends_on:
       - mongodb
+    ports:
+      - 0.0.0.0:3000:3000
