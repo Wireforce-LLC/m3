@@ -29,6 +29,10 @@ abstract class Axios {
         return new Promise(() => {});
     }
 
+    static request(config: AxiosRequestConfig): Promise<AxiosResponse> {
+        return new Promise(() => {});
+    }
+
     /**
      * Sends a POST request to the specified `url` with the given `data` and optional `config` object.
      *
