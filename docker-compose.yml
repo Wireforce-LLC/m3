@@ -1,6 +1,6 @@
 services:
   mongodb:
-    image: mongodb:8.0.0
+    image: mongo:8.0.0
     environment:
       - MONGO_INITDB_ROOT_USERNAME=V7AVh7FWmUYTCWzY
       - MONGO_INITDB_ROOT_PASSWORD=dYiQeJyd9Wv9K4Pz
