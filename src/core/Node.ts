@@ -7,6 +7,13 @@ export default class Node {
      */
     static getTypes<T>(obj: T): Record<string, any>|string {
         if (typeof obj !== 'object' || obj === null) return getType(obj);
+        if (Array.isArray(obj)) return getArrayType(obj);
+        if (obj instanceof Date) return 'Date';
+        if (obj instanceof RegExp) return 'RegExp';
+        if (obj instanceof Error) return 'Error';
+        if (obj === undefined) return 'Undefined';
+        if (obj === null) return 'Null';
+
         const types: Record<string, string> = {};
       
         function mapTypes(innerObj: any, path: string[] = []): void {

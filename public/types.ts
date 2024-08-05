@@ -109,11 +109,11 @@ async function useMeta(meta: Meta) {
  *      This could be a string representing the identifier of the dependency, an object of type
  *      DependencyLinker representing a custom dependency linker, or the special object $dependencies$
  *      representing the current dependencies of the current object.
- * @return {Promise<void>} A Promise that resolves when the declaration is complete.
+ * @return {Promise<{ value: any; error: any }>} A Promise that resolves when the declaration is complete.
  * @throws {Error} If the function is not implemented.
  */
 //@ts-ignore
-async function useDep(dep: $dependencies$): Promise<void> {
+async function useDep(dep: $dependencies$): Promise<{ value: any; error: any }> {
   throw new Error("Function not implemented.");
 }
 

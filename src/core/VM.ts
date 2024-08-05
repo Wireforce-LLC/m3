@@ -226,6 +226,10 @@ export default class VM extends Machine {
           return;
         }
 
+        if (_.isEmpty(id) || _.isNil(id)) {
+          throw new Error("Looks like you forgot to pass the 'id' argument");
+        }
+
         if (!context.__meta_id) {
           throw new Error(
             "Before you should call 'useMeta' and set the 'id' property"
@@ -375,7 +379,7 @@ export default class VM extends Machine {
     );
 
     if (!script) {
-      
+
       throw new Error("Failed to create script");
     }
 
