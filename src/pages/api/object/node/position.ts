@@ -22,5 +22,9 @@ export default async function handler(
   }
 
   // set the HTTP status code and send a JSON response with the message
-  return res.status(200).json({});
+  return res.status(200).json({
+    code: 200,
+    isError: false,
+    data: "OK"
+  });
 }
