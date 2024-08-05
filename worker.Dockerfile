@@ -2,7 +2,7 @@ FROM python:3.9
 
 WORKDIR /app
 
-RUN pip install requests python-dotenv
+RUN pip install requests python-dotenv rich
 
 ADD worker.py main.py
 
