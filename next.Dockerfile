@@ -17,6 +17,7 @@ RUN pnpm install
 
 # Copy all files from the context directory (where the Dockerfile is located) to the working directory in the container.
 COPY . .
+COPY ./public /app/public
 
 # Run the project build command using pnpm.
 RUN pnpm build
