@@ -2,11 +2,7 @@ FROM node:18-alpine
 
 ENV NODE_ENV=production
 
-RUN apk add --no-cache libc6-compat
-
 WORKDIR /app
-
-USER nextjs
 
 COPY package.json package-lock.json* ./
 
