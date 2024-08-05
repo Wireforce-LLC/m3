@@ -15,6 +15,9 @@ services:
     build:
       context: .
       dockerfile: next.Dockerfile
+    volumes:
+      - ./data:/app/data
+      - ./sandbox:/app/sandbox
     restart: always
     environment:
       MONGOURI: mongodb://V7AVh7FWmUYTCWzY:dYiQeJyd9Wv9K4Pz@mongodb
