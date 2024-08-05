@@ -4,8 +4,8 @@ services:
     image: mongo
     restart: always
     environment:
-      - MONGO_INITDB_ROOT_USERNAME=V7AVh7FWmUYTCWzY
-      - MONGO_INITDB_ROOT_PASSWORD=dYiQeJyd9Wv9K4Pz
+      MONGO_INITDB_ROOT_USERNAME: V7AVh7FWmUYTCWzY
+      MONGO_INITDB_ROOT_PASSWORD: dYiQeJyd9Wv9K4Pz
     volumes:
       - type: bind
         source: ./.mongod
@@ -19,7 +19,7 @@ services:
       dockerfile: next.Dockerfile
     restart: always
     environment:
-      - MONGOURI=mongodb://V7AVh7FWmUYTCWzY:dYiQeJyd9Wv9K4Pz@mongodb
+      MONGOURI: mongodb://V7AVh7FWmUYTCWzY:dYiQeJyd9Wv9K4Pz@mongodb
     depends_on:
       - mongodb
     ports:
