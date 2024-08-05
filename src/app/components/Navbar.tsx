@@ -20,10 +20,12 @@ interface NavbarState {
 
 const useNavbarState = create<NavbarState>()((set) => ({
   workerState: {
-    idleSeconds: 0,
-    isIdle: true,
-    lastCall: new Date(),
-    now: new Date(),
+      idleSeconds: 0,
+      isIdle: true,
+      lastCall: new Date(),
+      now: new Date(),
+      scheduleMap: {},
+      futureCallMap: {}
   },
   setWorkerState: (workerState) => set({ workerState }),
 }));
