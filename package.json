@@ -39,6 +39,7 @@
     "zustand": "^4.5.4"
   },
   "devDependencies": {
+    "@types/lodash": "^4.17.7",
     "@types/node": "^20.14.14",
     "@types/node-cron": "^3.0.11",
     "@types/react": "^18",
@@ -46,7 +47,6 @@
     "@types/underscore": "^1.11.15",
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
-    "typescript": "^5",
-    "@types/lodash": "^4.17.21"
+    "typescript": "^5"
   }
 }
